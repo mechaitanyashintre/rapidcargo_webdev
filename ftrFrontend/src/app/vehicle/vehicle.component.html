@@ -1,0 +1,120 @@
+<div class="container">
+  <div class="card mt-5 text-center">
+    <h1>Vehicle Dashboard</h1>
+  </div>
+
+  <div class="card mt-5 p-4">
+    <form #registerForm="ngForm" (ngSubmit)="register(registerForm)">
+      <div class="form-group">
+        <label>Vehicle Number:</label>
+        <input type="text" name="vehicleNumber" ngModel class="form-control" placeholder="Vehicle ID" />
+      </div>
+      <div class="form-group">
+        <label>Vehicle Name:</label>
+        <input type="text" name="vehicleName" ngModel class="form-control" placeholder="Vehicle Name" />
+      </div>
+      <div class="form-group">
+        <label>Max Lifting Capacity:</label>
+        <input type="number" name="maxLiftingCapacity" ngModel class="form-control" placeholder="Capacity" />
+      </div>
+      <div class="form-group">
+        <label>Retire Date:</label>
+        <input type="date" name="retireDate" ngModel class="form-control" />
+      </div>
+      <div class="form-group">
+        <label>Vehicle Status:</label>
+        <input type="text" name="vehicleStatus" ngModel class="form-control" placeholder="Status" />
+      </div>
+      <div class="form-group">
+        <label>Harbor Location:</label>
+        <input type="text" name="harborLocation" ngModel class="form-control" placeholder="Location" />
+      </div>
+      <div class="form-group">
+        <label>Country:</label>
+        <input type="text" name="country" ngModel class="form-control" placeholder="Country" />
+      </div>
+      <div class="form-group">
+        <input type="submit" class="btn btn-primary w-100" value="Submit" />
+      </div>
+    </form>
+  </div>
+
+  <div class="mt-5">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Vehicle Number</th>
+          <th>Vehicle Name</th>
+          <th>Capacity</th>
+          <th>Retire Date</th>
+          <th>Status</th>
+          <th>Harbor Location</th>
+          <th>Country</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let vehicle of vehicleDetails">
+          <td>{{vehicle.vehicleNumber}}</td>
+          <td>{{vehicle.vehicleName}}</td>
+          <td>{{vehicle.capacity}}</td>
+          <td>{{vehicle.retireDate}}</td>
+          <td>{{vehicle.vehicleStatus}}</td>
+          <td>{{vehicle.harborLocation}}</td>
+          <td>{{vehicle.country}}</td>
+          <td>
+            <button class="btn btn-primary" (click)="edit(vehicle)" data-toggle="modal" data-target="#exampleModal">Edit</button>
+            <button class="btn btn-danger" (click)="deleteVehicle(vehicle)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Edit Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Update Vehicle</h5>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <form #updateForm="ngForm" (ngSubmit)="updateVehicle()">
+            <div class="form-group">
+              <label>Vehicle Number:</label>
+              <input type="text" class="form-control" [(ngModel)]="vehicleToUpdate.vehicleNumber" name="vehicleNumber" disabled />
+            </div>
+            <div class="form-group">
+              <label>Vehicle Name:</label>
+              <input type="text" class="form-control" [(ngModel)]="vehicleToUpdate.vehicleName" name="vehicleName" />
+            </div>
+            <div class="form-group">
+              <label>Capacity:</label>
+              <input type="text" class="form-control" [(ngModel)]="vehicleToUpdate.capacity" name="capacity" />
+            </div>
+            <div class="form-group">
+              <label>Retire Date:</label>
+              <input type="date" class="form-control" [(ngModel)]="vehicleToUpdate.retireDate" name="retireDate" />
+            </div>
+            <div class="form-group">
+              <label>Status:</label>
+              <input type="text" class="form-control" [(ngModel)]="vehicleToUpdate.vehicleStatus" name="vehicleStatus" />
+            </div>
+            <div class="form-group">
+              <label>Harbor Location:</label>
+              <input type="text" class="form-control" [(ngModel)]="vehicleToUpdate.harborLocation" name="harborLocation" />
+            </div>
+            <div class="form-group">
+              <label>Country:</label>
+              <input type="text" class="form-control" [(ngModel)]="vehicleToUpdate.country" name="country" />
+            </div>
+            <div class="form-group">
+              <input type="submit" value="Update" class="btn btn-primary w-100" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,57 @@
+<div class="container container-styles">
+  <div class="col-xs-7 col-xs-offset-3">
+    <div class="panel panel-primary">
+      <div class="panel-heading">Login</div>
+      <div class="panel-body padding">
+        <form [formGroup]="loginForm" class="form-horizontal">
+          <div class="form-group">
+            <label for="userName" class="col-xs-4 control-label">User Name</label>
+            <div class="col-xs-8">
+              <input type="text" class="form-control"
+                     [ngClass]="{'valid': loginForm.controls.userName.valid,
+                                 'invalid': loginForm.controls.userName.invalid && loginForm.controls.userName.dirty}"
+                     formControlName="userName" #uname>
+              <div *ngIf="loginForm.controls.userName.errors && loginForm.controls.userName.dirty">
+                <div *ngIf="loginForm.controls.userName.errors['required']" style="color: red">
+                  UserName is required
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="password" class="col-xs-4 control-label">Password</label>
+            <div class="col-xs-8">
+              <input type="password" class="form-control"
+                     [ngClass]="{'valid': loginForm.controls.password.valid,
+                                 'invalid': loginForm.controls.password.invalid && loginForm.controls.password.dirty}"
+                     formControlName="password">
+              <div *ngIf="loginForm.controls.password.errors && loginForm.controls.password.dirty">
+                <div *ngIf="loginForm.controls.password.errors['required']" style="color: red">
+                  Password is required
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div *ngIf="!valid" class="error">
+            Invalid Credentials...Please try again...
+          </div>
+          <br/>
+
+          <div class="form-group">
+            <span class="col-xs-4"></span>
+            <div class="col-xs-3">
+              <button class="btn btn-primary w-100" [disabled]="!loginForm.valid" (click)="onSubmit()">
+                Login
+              </button>
+            </div>
+          </div>
+        </form>
+        <span class="col-xs-5" style="top:8px">
+          <a [routerLink]="['/welcome']" class="link-underline">Cancel</a>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

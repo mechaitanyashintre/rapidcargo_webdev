@@ -1,0 +1,69 @@
+<div style="text-align: center">
+  <h1>{{message}}</h1>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <form>
+        <legend class="text-center">
+          Valid information is required to register.
+          <span class="req"><small> required *</small></span>
+        </legend>
+        <fieldset>
+          <div class="form-group">
+            <label><span class="req">*</span> Firstname:</label>
+            <input required type="text" [(ngModel)]="user.first_name" name="first_name"
+                   class="form-control" maxlength="20" placeholder="Enter your first name..." />
+          </div>
+          <div class="form-group">
+            <label><span class="req">*</span> Lastname:</label>
+            <input required type="text" [(ngModel)]="user.last_name" name="last_name"
+                   class="form-control" maxlength="20" placeholder="Enter your last name..." />
+          </div>
+          <div class="form-group">
+            <label><span class="req">*</span> EmailID:</label>
+            <input required type="email" [(ngModel)]="user.email_id" name="email_id"
+                   class="form-control" placeholder="Enter your EmailID..." />
+          </div>
+          <div class="form-group">
+            <label><span class="req">*</span> MobileNO:</label>
+            <input required type="tel" [(ngModel)]="user.mobile_number" name="mobile_number"
+                   class="form-control" maxlength="10" placeholder="Mobile number..." />
+          </div>
+          <div class="form-group">
+            <label><span class="req">*</span> Password:</label>
+            <input class="form-control" name="password" [(ngModel)]="user.password"
+                   minlength="7" maxlength="15" type="password" placeholder="Enter password" />
+          </div>
+          <div class="form-group">
+            <label><span class="req">*</span> Nationality:</label>
+            <input required type="text" [(ngModel)]="user.nationality" name="nationality"
+                   class="form-control" maxlength="10" placeholder="Nationality..." />
+          </div>
+          <div class="form-group">
+            <label><span class="req">*</span> Passport number:</label>
+            <input required type="text" [(ngModel)]="user.passport_number" name="passport_number"
+                   class="form-control" minlength="7" maxlength="12" placeholder="Passport number..." />
+          </div>
+          <div class="form-group">
+            <label><span class="req">*</span> Permanent Address:</label>
+            <input required type="text" [(ngModel)]="user.permanent_address" name="permanent_address"
+                   class="form-control" maxlength="200" placeholder="Permanent Address..." />
+          </div>
+          <div class="form-group">
+            <label><span class="req">*</span> Office Address:</label>
+            <input required type="text" [(ngModel)]="user.office_address" name="office_address"
+                   class="form-control" maxlength="200" placeholder="Office Address..." />
+          </div>
+          <div class="form-group">
+            <label><span class="req">*</span> Pin Number:</label>
+            <input required type="number" [(ngModel)]="user.personal_identification_number"
+                   name="personal_identification_number" class="form-control" maxlength="12" placeholder="Pin..." />
+          </div>
+          <input class="btn btn-success" type="submit" value="Register" (click)="registerNow()">
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</div>

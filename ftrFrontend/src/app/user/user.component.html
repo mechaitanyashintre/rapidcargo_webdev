@@ -1,0 +1,43 @@
+<nav class='navbar navbar-default navbar-fixed-top navbarpos'>
+    <div class='container-fluid'>
+        <a class='navbar-brand txtcolor'>
+            FTR USER
+            <span class="glyphicon glyphicon-shopping-cart txtcolor"></span>
+        </a>
+        <li class="nav-item dropdown" style="list-style: none; position: absolute; margin-left: 30px;">
+            <a class="nav-link" [routerLink]='["/viewdetails"]' style="position: absolute; margin-left: 250px; margin-top: 20px;">
+                view
+            </a>
+        </li>
+        <li class="nav-item dropdown" style="list-style: none; position: absolute; margin-left: 30px;">
+            <a class="nav-link" [routerLink]='["/work-item"]' style="position: absolute; margin-left: 450px; margin-top: 20px;">
+                create
+            </a>
+        </li>
+    </div>
+</nav>
+<br />
+<br />
+
+<br />
+<br />
+<div class="container">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Gender</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let student of students">
+                <td>{{ student.id }}</td>
+                <td>{{ student.name }}</td>
+                <td>{{ student.email }}</td>
+                <td>{{ student.gender }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

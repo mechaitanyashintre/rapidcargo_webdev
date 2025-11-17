@@ -1,0 +1,57 @@
+.iconposf {
+  position: relative;
+  top: 10px;
+}
+
+/* header social icons */
+ul.social-network {
+  list-style: none;
+  display: inline;
+  margin-left: 0 !important;
+  padding: 0;
+}
+
+ul.social-network li {
+  display: inline;
+  margin: 0 5px;
+}
+
+.social-circle li a {
+  display: inline-block;
+  position: relative;
+  margin: 0 auto;
+  border-radius: 50%;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+}
+
+.social-circle li i {
+  margin: 0;
+  line-height: 10px;
+  text-align: center;
+  color: #ff0080;
+}
+
+/* navbar styles */
+.navbart {
+  border: 0px;
+  border-radius: 0px;
+  background-color: rgb(83, 243, 243);
+}
+
+.navLinkAlign {
+  padding-left: 300px;
+  padding-right: 120px;
+  color: white;
+}
+
+.navStyle {
+  margin-left: 150px;
+}
+
+.navbar-brand, .nav-link {
+  color: rgb(0, 0, 0);
+  font-size: 15px;
+}

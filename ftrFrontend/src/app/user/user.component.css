@@ -1,0 +1,90 @@
+thead {
+    color: #337AB7;
+    margin-top: 40px;
+    padding: 0 10px;
+}
+
+.display {
+    display: "";
+}
+
+.rowt {
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.head-span {
+    margin-top: -20px;
+    font-size: 15px;
+}
+
+.heading-color {
+    background-color: white;
+    color: #FF00FF;
+}
+
+.dropdown-menu.columns-3 {
+    min-width: 600px;
+}
+
+.dropdown-menu li a {
+    padding: 5px 15px;
+    font-weight: 300;
+}
+
+.multi-column-dropdown {
+    list-style: none;
+}
+
+@media (max-width: 800px) {
+    .dropdown-menu.multi-column {
+        min-width: 240px !important;
+        overflow-x: hidden;
+    }
+}
+
+.caret1 {
+    border-top: 4px solid magenta;
+}
+
+.navbarposi {
+    background-color: white;
+    top: 50px;
+    width: 100%;
+}
+
+.searchboxpost {
+    position: relative;
+    top: 10px;
+}
+
+.cartpost {
+    position: relative;
+    top: 10px;
+    padding: 8px;
+}
+
+.carouselpost {
+    position: relative;
+    top: 65px;
+    width: 100%;
+}
+
+.carouselheighti {
+    height: 350px;
+}
+
+.nobordert {
+    border: 0;
+}
+
+.bgcolort {
+    background-color: white;
+}
+
+.tabpos {
+    width: 50%;
+    text-align: center;
+}

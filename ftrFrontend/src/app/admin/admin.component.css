@@ -1,0 +1,80 @@
+thead {
+  color: #337AB7;
+}
+
+.displayt {
+  display: "";
+}
+
+.row {
+  margin-top: 40px;
+  padding: 0 10px;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.head-span {
+  margin-top: -20px;
+  font-size: 15px;
+}
+
+.heading-color {
+  background-color: #FF00FF;
+  color: white;
+}
+
+.dropdown-menu.columns-3 {
+  min-width: 600px;
+}
+
+.multi-column-dropdown {
+  list-style: none;
+}
+
+@media (max-width: 800px) {
+  .dropdown-menu.multi-column {
+    min-width: 240px !important;
+    overflow-x: hidden;
+  }
+}
+
+.caret {
+  border-top: 4px solid magenta;
+}
+
+.navbarposi {
+  background-color: white;
+  top: 50px;
+  width: 100%;
+}
+
+.searchboxpost,
+.cartpost {
+  position: relative;
+  top: 10px;
+}
+
+.carouselpost {
+  position: relative;
+  top: 65px;
+  width: 100%;
+}
+
+.carouselheight {
+  height: 350px;
+}
+
+.noborder {
+  border: 0;
+}
+
+.bgcolor {
+  background-color: white;
+}
+
+.tabpos {
+  width: 50%;
+  text-align: center;
+}

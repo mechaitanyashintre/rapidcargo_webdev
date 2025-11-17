@@ -1,0 +1,184 @@
+<div class="container">
+
+  <div class="card mt-5" style="align-items: center;">
+    <h1>Terminal Dashboard</h1>
+  </div>
+
+  <div class="card mt-5" style="padding: 20px;">
+
+    <form #registerForm="ngForm" (ngSubmit)="register(registerForm)">
+
+      <div class="form-group">
+        <label>Terminal ID :</label>
+        <input type="text" name="TerminalId" [(ngModel)]="TerminalId" class="form-control" placeholder="ID">
+      </div>
+
+      <div class="form-group">
+        <label>Terminal Name :</label>
+        <input type="text" name="TerminalName" [(ngModel)]="TerminalName" class="form-control" placeholder="Name">
+      </div>
+
+      <div class="form-group">
+        <label>Country :</label>
+        <input type="text" name="Country" [(ngModel)]="Country" class="form-control" placeholder="Country">
+      </div>
+
+      <div class="form-group">
+        <label>Item Type :</label>
+        <input type="text" name="ItemType" [(ngModel)]="ItemType" class="form-control" placeholder="Type">
+      </div>
+
+      <div class="form-group">
+        <label>Terminal Description :</label>
+        <input type="text" name="TerminalDescription" [(ngModel)]="TerminalDescription" class="form-control" placeholder="Description">
+      </div>
+
+      <div class="form-group">
+        <label>Capacity :</label>
+        <input type="number" name="Capacity" [(ngModel)]="Capacity" class="form-control" placeholder="Capacity">
+      </div>
+
+      <div class="form-group">
+        <label>Status :</label>
+        <input type="text" name="Status" [(ngModel)]="Status" class="form-control" placeholder="Status">
+      </div>
+
+      <div class="form-group">
+        <label>Harbour Location :</label>
+        <input type="number" name="HarbourLocation" [(ngModel)]="HarbourLocation" class="form-control" placeholder="Harbour Location">
+      </div>
+
+      <div class="form-group">
+        <label>Available Capacity :</label>
+        <input type="number" name="AvailableCapacity" [(ngModel)]="AvailableCapacity" class="form-control" placeholder="Available Capacity">
+      </div>
+
+      <div class="form-group">
+        <input type="submit" value="Submit" class="btn btn-primary w-100">
+      </div>
+
+    </form>
+  </div>
+
+  <div class="mt-5">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>TerminalId</th>
+          <th>TerminalName</th>
+          <th>Country</th>
+          <th>ItemType</th>
+          <th>TerminalDescription</th>
+          <th>Capacity</th>
+          <th>Status</th>
+          <th>HarbourLocation</th>
+          <th>AvailableCapacity</th>
+          <th>Edit</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let terminal of terminalDetails">
+          <td>{{ terminal.TerminalId }}</td>
+          <td>{{ terminal.TerminalName }}</td>
+          <td>{{ terminal.Country }}</td>
+          <td>{{ terminal.ItemType }}</td>
+          <td>{{ terminal.TerminalDescription }}</td>
+          <td>{{ terminal.Capacity }}</td>
+          <td>{{ terminal.Status }}</td>
+          <td>{{ terminal.HarbourLocation }}</td>
+          <td>{{ terminal.AvailableCapacity }}</td>
+
+          <td>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"
+              (click)="edit(terminal)">Edit</button>
+          </td>
+
+          <td>
+            <button type="button" class="btn btn-danger" (click)="deleteTerminal(terminal)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+
+    </table>
+  </div>
+
+</div>
+
+<!-- Update Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title">Update Terminal</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span>&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+
+        <form #updateForm="ngForm" (ngSubmit)="updateTerminal()">
+
+          <div class="form-group">
+            <label>TerminalId :</label>
+            <input type="text" disabled [(ngModel)]="terminalToUpdate.TerminalId" name="TerminalId"
+              class="form-control">
+          </div>
+
+          <div class="form-group">
+            <label>Terminal Name :</label>
+            <input type="text" [(ngModel)]="terminalToUpdate.TerminalName" name="TerminalName" class="form-control">
+          </div>
+
+          <div class="form-group">
+            <label>Country :</label>
+            <input type="text" [(ngModel)]="terminalToUpdate.Country" name="Country" class="form-control">
+          </div>
+
+          <div class="form-group">
+            <label>Item Type :</label>
+            <input type="text" [(ngModel)]="terminalToUpdate.ItemType" name="ItemType" class="form-control">
+          </div>
+
+          <div class="form-group">
+            <label>Terminal Description :</label>
+            <input type="text" [(ngModel)]="terminalToUpdate.TerminalDescription" name="TerminalDescription"
+              class="form-control">
+          </div>
+
+          <div class="form-group">
+            <label>Capacity :</label>
+            <input type="number" [(ngModel)]="terminalToUpdate.Capacity" name="Capacity" class="form-control">
+          </div>
+
+          <div class="form-group">
+            <label>Status :</label>
+            <input type="text" [(ngModel)]="terminalToUpdate.Status" name="Status" class="form-control">
+          </div>
+
+          <div class="form-group">
+            <label>Harbour Location :</label>
+            <input type="number" [(ngModel)]="terminalToUpdate.HarbourLocation" name="HarbourLocation"
+              class="form-control">
+          </div>
+
+          <div class="form-group">
+            <label>Available Capacity :</label>
+            <input type="number" [(ngModel)]="terminalToUpdate.AvailableCapacity" name="AvailableCapacity"
+              class="form-control">
+          </div>
+
+          <div class="form-group">
+            <input type="submit" value="Update" class="btn btn-primary w-100">
+          </div>
+
+        </form>
+
+      </div>
+
+    </div>
+  </div>
+</div>

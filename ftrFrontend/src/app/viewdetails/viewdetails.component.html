@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <form>
+        <fieldset>
+          <div class="form-group">
+            <label>ID:</label>
+            <input type="number" [(ngModel)]="user.user_id" name="user_id" class="form-control" placeholder="Enter your unique ID" />
+          </div>
+          <input type="button" class="btn btn-primary w-100" value="View" (click)="getD(user.user_id)" />
+          <input type="button" class="btn btn-danger w-100 mt-2" value="Delete" (click)="deleteUser(user.user_id)" />
+        </fieldset>
+      </form>
+    </div>
+  </div>
+
+  <div class="mt-5" *ngIf="userDetails">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>UID</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>Mobile</th>
+          <th>Nationality</th>
+          <th>Passport No</th>
+          <th>Permanent Address</th>
+          <th>Office Address</th>
+          <th>Pin</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{userDetails.userId}}</td>
+          <td>{{userDetails.firstName}}</td>
+          <td>{{userDetails.lastName}}</td>
+          <td>{{userDetails.emailId}}</td>
+          <td>{{userDetails.mobileNumber}}</td>
+          <td>{{userDetails.nationality}}</td>
+          <td>{{userDetails.passportNumber}}</td>
+          <td>{{userDetails.permanentAddress}}</td>
+          <td>{{userDetails.officeAddress}}</td>
+          <td>{{userDetails.personalIdentificationNumber}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
