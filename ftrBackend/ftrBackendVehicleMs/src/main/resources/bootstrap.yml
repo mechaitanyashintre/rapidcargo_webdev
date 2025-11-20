@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: ftrbackendvehiclems
+  cloud:
+    config:
+      uri: http://localhost:2000

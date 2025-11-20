@@ -1,0 +1,8 @@
+# FtrBackendUserMs/src/main/resources/bootstrap.yml
+
+spring:
+  application:
+    name: ftrbackenduserms
+  cloud:
+    config:
+      uri: http://localhost:2000

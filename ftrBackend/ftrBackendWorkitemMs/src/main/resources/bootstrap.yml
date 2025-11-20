@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: ftrbackendworkitemms
+  cloud:
+    config:
+      uri: http://localhost:2000
