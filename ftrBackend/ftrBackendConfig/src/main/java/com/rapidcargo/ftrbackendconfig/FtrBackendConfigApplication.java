@@ -1,5 +1,4 @@
-// Ftrbackendconfig/src/main/java/com/infosys/ftrbackendconfig/FtrBackendConfigApplication.java
-package com.infosys.ftrbackendconfig;
+package com.rapidcargo.ftrbackendconfig;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
