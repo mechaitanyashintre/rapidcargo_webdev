@@ -1,5 +1,5 @@
-// FtrBackendGateway/src/main/java/com/infosys/ftrbackendgateway/FtrBackendGatewayApplication.java
-package com.infosys.ftrbackendgateway;
+// FtrBackendGateway/src/main/java/com/rapidcargo/ftrbackendgateway/FtrBackendGatewayApplication.java
+package com.rapidcargo.ftrbackendgateway;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

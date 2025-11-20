@@ -1,6 +1,6 @@
-package com.infosys.ftrbackendworkitemms.repository;
+package com.rapidcargo.ftrbackendworkitemms.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import com.infosys.ftrbackendworkitemms.entity.Harbor;
+import com.rapidcargo.ftrbackendworkitemms.entity.Harbor;
 
 public interface HarborRepository extends JpaRepository<Harbor, String> {}

@@ -1,4 +1,4 @@
-package com.infosys.ftrbackendvehiclems.service;
+package com.rapidcargo.ftrbackendvehiclems.service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,11 +8,11 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Service;
 
-import com.infosys.ftrbackendvehiclems.dto.VehicleDTO;
-import com.infosys.ftrbackendvehiclems.entity.Vehicle;
-import com.infosys.ftrbackendvehiclems.exception.VehicleException;
-import com.infosys.ftrbackendvehiclems.repository.VehicleRepository;
-import com.infosys.ftrbackendvehiclems.validator.VehicleValidator;
+import com.rapidcargo.ftrbackendvehiclems.dto.VehicleDTO;
+import com.rapidcargo.ftrbackendvehiclems.entity.Vehicle;
+import com.rapidcargo.ftrbackendvehiclems.exception.VehicleException;
+import com.rapidcargo.ftrbackendvehiclems.repository.VehicleRepository;
+import com.rapidcargo.ftrbackendvehiclems.validator.VehicleValidator;
 
 @Service
 @PropertySource("classpath:ValidationMessages.properties")

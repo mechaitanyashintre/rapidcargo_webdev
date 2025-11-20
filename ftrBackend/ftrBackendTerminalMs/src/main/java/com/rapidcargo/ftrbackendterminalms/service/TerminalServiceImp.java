@@ -1,4 +1,4 @@
-package com.infosys.ftrbackendterminalms.service;
+package com.rapidcargo.ftrbackendterminalms.service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,10 +9,10 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Service;
 
-import com.infosys.ftrbackendterminalms.dto.TerminalDTO;
-import com.infosys.ftrbackendterminalms.entity.Terminal;
-import com.infosys.ftrbackendterminalms.exception.TerminalException;
-import com.infosys.ftrbackendterminalms.repository.TerminalRepository;
+import com.rapidcargo.ftrbackendterminalms.dto.TerminalDTO;
+import com.rapidcargo.ftrbackendterminalms.entity.Terminal;
+import com.rapidcargo.ftrbackendterminalms.exception.TerminalException;
+import com.rapidcargo.ftrbackendterminalms.repository.TerminalRepository;
 
 @Service
 @PropertySource("classpath:ValidationMessages.properties")

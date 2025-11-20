@@ -12,7 +12,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-    <groupId>com.infosys.ftrbackendterminalms</groupId>
+    <groupId>com.rapidcargo.ftrbackendterminalms</groupId>
     <artifactId>ftrBackendTerminalMs</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>ftrBackendTerminalMs</name>

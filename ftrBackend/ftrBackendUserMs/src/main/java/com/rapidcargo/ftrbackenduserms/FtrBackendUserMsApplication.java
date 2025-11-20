@@ -1,5 +1,5 @@
-// FtrBackendUserMs/src/main/java/com/infosys/ftrbackenduserms/FtrBackendUserMsApplication.java
-package com.infosys.ftrbackenduserms;
+// FtrBackendUserMs/src/main/java/com/rapidcargo/ftrbackenduserms/FtrBackendUserMsApplication.java
+package com.rapidcargo.ftrbackenduserms;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

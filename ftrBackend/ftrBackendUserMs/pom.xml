@@ -12,7 +12,7 @@
     <relativePath/>
   </parent>
 
-  <groupId>com.infosys.ftrbackenduserms</groupId>
+  <groupId>com.rapidcargo.ftrbackenduserms</groupId>
   <artifactId>ftrBackendUserMs</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>ftrBackendUserMs</name>

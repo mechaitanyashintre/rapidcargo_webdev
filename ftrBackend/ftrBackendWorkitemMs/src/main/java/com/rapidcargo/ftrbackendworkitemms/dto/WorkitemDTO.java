@@ -1,5 +1,5 @@
 // WorkitemDTO.java
-package com.infosys.ftrbackendworkitemms.dto;
+package com.rapidcargo.ftrbackendworkitemms.dto;
 
 import java.util.Date;
 import javax.validation.constraints.Max;
@@ -9,7 +9,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.infosys.ftrbackendworkitemms.entity.Workitem;
+import com.rapidcargo.ftrbackendworkitemms.entity.Workitem;
 
 public class WorkitemDTO {
 

@@ -1,8 +1,8 @@
-package com.infosys.ftrbackendterminalms.service;
+package com.rapidcargo.ftrbackendterminalms.service;
 
 import java.util.List;
-import com.infosys.ftrbackendterminalms.dto.TerminalDTO;
-import com.infosys.ftrbackendterminalms.exception.TerminalException;
+import com.rapidcargo.ftrbackendterminalms.dto.TerminalDTO;
+import com.rapidcargo.ftrbackendterminalms.exception.TerminalException;
 
 public interface TerminalService {
 

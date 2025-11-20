@@ -1,13 +1,13 @@
-package com.infosys.ftrbackendworkitemms.service;
+package com.rapidcargo.ftrbackendworkitemms.service;
 
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.infosys.ftrbackendworkitemms.dto.VehicleDTO;
-import com.infosys.ftrbackendworkitemms.dto.VehicleWorkitemDTO;
-import com.infosys.ftrbackendworkitemms.dto.WorkitemDTO;
-import com.infosys.ftrbackendworkitemms.exception.WorkitemException;
+import com.rapidcargo.ftrbackendworkitemms.dto.VehicleDTO;
+import com.rapidcargo.ftrbackendworkitemms.dto.VehicleWorkitemDTO;
+import com.rapidcargo.ftrbackendworkitemms.dto.WorkitemDTO;
+import com.rapidcargo.ftrbackendworkitemms.exception.WorkitemException;
 
 @Service
 public interface WotkitemService {

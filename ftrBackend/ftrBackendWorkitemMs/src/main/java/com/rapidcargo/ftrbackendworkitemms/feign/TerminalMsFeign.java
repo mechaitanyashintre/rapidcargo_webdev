@@ -1,4 +1,4 @@
-package com.infosys.ftrbackendworkitemms.feign;
+package com.rapidcargo.ftrbackendworkitemms.feign;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;

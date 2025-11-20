@@ -1,5 +1,5 @@
-// FtrBackendUserMs/src/main/java/com/infosys/ftrbackenduserms/service/UserServiceImp.java
-package com.infosys.ftrbackenduserms.service;
+// FtrBackendUserMs/src/main/java/com/rapidcargo/ftrbackenduserms/service/UserServiceImp.java
+package com.rapidcargo.ftrbackenduserms.service;
 
 import java.util.Optional;
 
@@ -8,14 +8,14 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Service;
 
-import com.infosys.ftrbackenduserms.dto.LoginDTO;
-import com.infosys.ftrbackenduserms.dto.UserProfileDTO;
-import com.infosys.ftrbackenduserms.entity.Login;
-import com.infosys.ftrbackenduserms.entity.User;
-import com.infosys.ftrbackenduserms.exception.UserException;
-import com.infosys.ftrbackenduserms.repository.LoginRepository;
-import com.infosys.ftrbackenduserms.repository.UserRepository;
-import com.infosys.ftrbackenduserms.validator.UserValidator;
+import com.rapidcargo.ftrbackenduserms.dto.LoginDTO;
+import com.rapidcargo.ftrbackenduserms.dto.UserProfileDTO;
+import com.rapidcargo.ftrbackenduserms.entity.Login;
+import com.rapidcargo.ftrbackenduserms.entity.User;
+import com.rapidcargo.ftrbackenduserms.exception.UserException;
+import com.rapidcargo.ftrbackenduserms.repository.LoginRepository;
+import com.rapidcargo.ftrbackenduserms.repository.UserRepository;
+import com.rapidcargo.ftrbackenduserms.validator.UserValidator;
 
 @Service
 @PropertySource("classpath:ValidationMessages.prop")

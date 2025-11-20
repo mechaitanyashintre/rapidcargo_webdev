@@ -1,10 +1,10 @@
-// FtrBackendUserMs/src/main/java/com/infosys/ftrbackenduserms/entity/Login.java
-package com.infosys.ftrbackenduserms.entity;
+// FtrBackendUserMs/src/main/java/com/rapidcargo/ftrbackenduserms/entity/Login.java
+package com.rapidcargo.ftrbackenduserms.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import com.infosys.ftrbackenduserms.dto.LoginDTO;
+import com.rapidcargo.ftrbackenduserms.dto.LoginDTO;
 
 @Entity
 @Table(name = "ftr_login")

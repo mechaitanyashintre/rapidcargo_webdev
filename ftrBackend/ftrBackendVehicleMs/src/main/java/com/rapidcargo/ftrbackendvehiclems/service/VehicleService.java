@@ -1,8 +1,8 @@
-package com.infosys.ftrbackendvehiclems.service;
+package com.rapidcargo.ftrbackendvehiclems.service;
 
 import java.util.List;
-import com.infosys.ftrbackendvehiclems.dto.VehicleDTO;
-import com.infosys.ftrbackendvehiclems.exception.VehicleException;
+import com.rapidcargo.ftrbackendvehiclems.dto.VehicleDTO;
+import com.rapidcargo.ftrbackendvehiclems.exception.VehicleException;
 
 public interface VehicleService {
     // insertNewVehicle

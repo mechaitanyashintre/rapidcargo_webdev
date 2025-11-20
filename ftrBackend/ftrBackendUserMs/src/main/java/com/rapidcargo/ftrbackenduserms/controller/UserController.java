@@ -1,5 +1,5 @@
-// FtrBackendUserMs/src/main/java/com/infosys/ftrbackenduserms/controller/UserController.java
-package com.infosys.ftrbackenduserms.controller;
+// FtrBackendUserMs/src/main/java/com/rapidcargo/ftrbackenduserms/controller/UserController.java
+package com.rapidcargo.ftrbackenduserms.controller;
 
 import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,10 +7,10 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import com.infosys.ftrbackenduserms.dto.LoginDTO;
-import com.infosys.ftrbackenduserms.dto.UserProfileDTO;
-import com.infosys.ftrbackenduserms.exception.UserException;
-import com.infosys.ftrbackenduserms.service.UserService;
+import com.rapidcargo.ftrbackenduserms.dto.LoginDTO;
+import com.rapidcargo.ftrbackenduserms.dto.UserProfileDTO;
+import com.rapidcargo.ftrbackenduserms.exception.UserException;
+import com.rapidcargo.ftrbackenduserms.service.UserService;
 
 @RestController
 @RequestMapping("userprofile")

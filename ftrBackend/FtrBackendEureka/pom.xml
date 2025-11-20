@@ -13,7 +13,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-    <groupId>com.infosys.ftrbackendeureka</groupId>
+    <groupId>com.rapidcargo.ftrbackendeureka</groupId>
     <artifactId>ftrBackendEureka</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>ftrBackendEureka</name>

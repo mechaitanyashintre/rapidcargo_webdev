@@ -1,4 +1,4 @@
-package com.infosys.ftrbackendterminalms.controller;
+package com.rapidcargo.ftrbackendterminalms.controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -9,11 +9,11 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import com.infosys.ftrbackendterminalms.dto.TerminalDTO;
-import com.infosys.ftrbackendterminalms.entity.Terminal;
-import com.infosys.ftrbackendterminalms.exception.TerminalException;
-import com.infosys.ftrbackendterminalms.repository.TerminalRepository;
-import com.infosys.ftrbackendterminalms.service.TerminalService;
+import com.rapidcargo.ftrbackendterminalms.dto.TerminalDTO;
+import com.rapidcargo.ftrbackendterminalms.entity.Terminal;
+import com.rapidcargo.ftrbackendterminalms.exception.TerminalException;
+import com.rapidcargo.ftrbackendterminalms.repository.TerminalRepository;
+import com.rapidcargo.ftrbackendterminalms.service.TerminalService;
 
 @RestController
 @RequestMapping("terminals")

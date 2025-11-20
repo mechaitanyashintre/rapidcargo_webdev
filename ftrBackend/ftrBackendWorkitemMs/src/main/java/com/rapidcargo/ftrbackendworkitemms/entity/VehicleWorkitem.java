@@ -1,10 +1,10 @@
-package com.infosys.ftrbackendworkitemms.entity;
+package com.rapidcargo.ftrbackendworkitemms.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import com.infosys.ftrbackendworkitemms.dto.VehicleWorkitemDTO;
+import com.rapidcargo.ftrbackendworkitemms.dto.VehicleWorkitemDTO;
 
 @Entity
 @Table(name = "ftr_vehicle_workitem")

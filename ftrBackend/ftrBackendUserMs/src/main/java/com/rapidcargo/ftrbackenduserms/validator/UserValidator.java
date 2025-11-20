@@ -1,10 +1,10 @@
-// FtrBackendUserMs/src/main/java/com/infosys/ftrbackenduserms/validator/UserValidator.java
-package com.infosys.ftrbackenduserms.validator;
+// FtrBackendUserMs/src/main/java/com/rapidcargo/ftrbackenduserms/validator/UserValidator.java
+package com.rapidcargo.ftrbackenduserms.validator;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import com.infosys.ftrbackenduserms.exception.UserException;
+import com.rapidcargo.ftrbackenduserms.exception.UserException;
 
 public class UserValidator {
 

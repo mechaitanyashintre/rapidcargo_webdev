@@ -1,4 +1,4 @@
-package com.infosys.ftrbackendvehiclems.controller;
+package com.rapidcargo.ftrbackendvehiclems.controller;
 
 import java.util.List;
 import javax.validation.Valid;
@@ -8,11 +8,11 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import com.infosys.ftrbackendvehiclems.dto.VehicleDTO;
-import com.infosys.ftrbackendvehiclems.entity.Vehicle;
-import com.infosys.ftrbackendvehiclems.exception.VehicleException;
-import com.infosys.ftrbackendvehiclems.repository.VehicleRepository;
-import com.infosys.ftrbackendvehiclems.service.VehicleService;
+import com.rapidcargo.ftrbackendvehiclems.dto.VehicleDTO;
+import com.rapidcargo.ftrbackendvehiclems.entity.Vehicle;
+import com.rapidcargo.ftrbackendvehiclems.exception.VehicleException;
+import com.rapidcargo.ftrbackendvehiclems.repository.VehicleRepository;
+import com.rapidcargo.ftrbackendvehiclems.service.VehicleService;
 
 @RestController
 @RequestMapping(value = "/vehicles")

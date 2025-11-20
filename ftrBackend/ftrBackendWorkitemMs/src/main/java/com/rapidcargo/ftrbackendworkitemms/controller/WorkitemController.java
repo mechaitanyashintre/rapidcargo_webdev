@@ -1,5 +1,5 @@
 // WorkitemApi.java
-package com.infosys.ftrbackendworkitemms.controller;
+package com.rapidcargo.ftrbackendworkitemms.controller;
 
 import java.util.List;
 import javax.validation.Valid;
@@ -9,11 +9,11 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import com.infosys.ftrbackendworkitemms.dto.VehicleDTO;
-import com.infosys.ftrbackendworkitemms.dto.VehicleWorkitemDTO;
-import com.infosys.ftrbackendworkitemms.dto.WorkitemDTO;
-import com.infosys.ftrbackendworkitemms.exception.WorkitemException;
-import com.infosys.ftrbackendworkitemms.service.WotkitemService;
+import com.rapidcargo.ftrbackendworkitemms.dto.VehicleDTO;
+import com.rapidcargo.ftrbackendworkitemms.dto.VehicleWorkitemDTO;
+import com.rapidcargo.ftrbackendworkitemms.dto.WorkitemDTO;
+import com.rapidcargo.ftrbackendworkitemms.exception.WorkitemException;
+import com.rapidcargo.ftrbackendworkitemms.service.WotkitemService;
 
 @RestController
 @RequestMapping(value = "workitems")

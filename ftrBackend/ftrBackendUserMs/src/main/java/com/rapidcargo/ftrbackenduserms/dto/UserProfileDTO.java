@@ -1,8 +1,8 @@
-// FtrBackendUserMs/src/main/java/com/infosys/ftrbackenduserms/dto/UserProfileDTO.java
-package com.infosys.ftrbackenduserms.dto;
+// FtrBackendUserMs/src/main/java/com/rapidcargo/ftrbackenduserms/dto/UserProfileDTO.java
+package com.rapidcargo.ftrbackenduserms.dto;
 
 import javax.validation.constraints.*;
-import com.infosys.ftrbackenduserms.entity.User;
+import com.rapidcargo.ftrbackenduserms.entity.User;
 
 public class UserProfileDTO {
     private Integer userId;

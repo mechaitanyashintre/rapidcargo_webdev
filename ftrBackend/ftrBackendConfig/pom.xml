@@ -13,7 +13,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-    <groupId>com.infosys.ftrbackendconfig</groupId>
+    <groupId>com.rapidcargo.ftrbackendconfig</groupId>
     <artifactId>ftrBackendConfig</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>ftrBackendConfig</name>

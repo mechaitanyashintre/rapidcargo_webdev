@@ -1,8 +1,8 @@
-// FtrBackendUserMs/src/main/java/com/infosys/ftrbackenduserms/entity/User.java
-package com.infosys.ftrbackenduserms.entity;
+// FtrBackendUserMs/src/main/java/com/rapidcargo/ftrbackenduserms/entity/User.java
+package com.rapidcargo.ftrbackenduserms.entity;
 
 import javax.persistence.*;
-import com.infosys.ftrbackenduserms.dto.UserProfileDTO;
+import com.rapidcargo.ftrbackenduserms.dto.UserProfileDTO;
 
 @Entity
 @Table(name = "ftr_user")

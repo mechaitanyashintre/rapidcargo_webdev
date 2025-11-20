@@ -1,11 +1,11 @@
-package com.infosys.ftrbackendvehiclems.dto;
+package com.rapidcargo.ftrbackendvehiclems.dto;
 
 import java.util.Date;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.infosys.ftrbackendvehiclems.entity.Vehicle;
+import com.rapidcargo.ftrbackendvehiclems.entity.Vehicle;
 
 public class VehicleDTO {
 

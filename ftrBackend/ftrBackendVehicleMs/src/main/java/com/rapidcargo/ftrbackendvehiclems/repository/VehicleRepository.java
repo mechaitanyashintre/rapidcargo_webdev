@@ -1,8 +1,8 @@
-package com.infosys.ftrbackendvehiclems.repository;
+package com.rapidcargo.ftrbackendvehiclems.repository;
 
 import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
-import com.infosys.ftrbackendvehiclems.entity.Vehicle;
+import com.rapidcargo.ftrbackendvehiclems.entity.Vehicle;
 
 public interface VehicleRepository extends JpaRepository<Vehicle, String> {
     // fetchAvailableVehicles

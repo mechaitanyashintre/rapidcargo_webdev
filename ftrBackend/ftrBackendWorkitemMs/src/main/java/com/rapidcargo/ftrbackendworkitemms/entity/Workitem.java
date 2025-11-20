@@ -1,11 +1,11 @@
-package com.infosys.ftrbackendworkitemms.entity;
+package com.rapidcargo.ftrbackendworkitemms.entity;
 
 import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import com.infosys.ftrbackendworkitemms.dto.WorkitemDTO;
+import com.rapidcargo.ftrbackendworkitemms.dto.WorkitemDTO;
 
 @Entity
 @Table(name = "ftr_workitems")

@@ -1,9 +1,9 @@
-// FtrBackendUserMs/src/main/java/com/infosys/ftrbackenduserms/service/UserService.java
-package com.infosys.ftrbackenduserms.service;
+// FtrBackendUserMs/src/main/java/com/rapidcargo/ftrbackenduserms/service/UserService.java
+package com.rapidcargo.ftrbackenduserms.service;
 
-import com.infosys.ftrbackenduserms.dto.LoginDTO;
-import com.infosys.ftrbackenduserms.dto.UserProfileDTO;
-import com.infosys.ftrbackenduserms.exception.UserException;
+import com.rapidcargo.ftrbackenduserms.dto.LoginDTO;
+import com.rapidcargo.ftrbackenduserms.dto.UserProfileDTO;
+import com.rapidcargo.ftrbackenduserms.exception.UserException;
 
 public interface UserService {
     UserProfileDTO createUser(UserProfileDTO dto) throws UserException;

@@ -1,4 +1,4 @@
-package com.infosys.ftrbackendterminalms.exception;
+package com.rapidcargo.ftrbackendterminalms.exception;
 
 public class TerminalException extends Exception {
     private static final long serialVersionUID = 1L;

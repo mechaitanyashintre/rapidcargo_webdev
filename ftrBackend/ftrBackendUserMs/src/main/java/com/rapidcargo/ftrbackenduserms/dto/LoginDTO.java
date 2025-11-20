@@ -1,9 +1,9 @@
-// FtrBackendUserMs/src/main/java/com/infosys/ftrbackenduserms/dto/LoginDTO.java
-package com.infosys.ftrbackenduserms.dto;
+// FtrBackendUserMs/src/main/java/com/rapidcargo/ftrbackenduserms/dto/LoginDTO.java
+package com.rapidcargo.ftrbackenduserms.dto;
 
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
-import com.infosys.ftrbackenduserms.entity.Login;
+import com.rapidcargo.ftrbackenduserms.entity.Login;
 
 public class LoginDTO {
     private Integer userId;

@@ -1,7 +1,7 @@
 // WorkitemTerminalDTO.java
-package com.infosys.ftrbackendworkitemms.dto;
+package com.rapidcargo.ftrbackendworkitemms.dto;
 
-import com.infosys.ftrbackendworkitemms.entity.WorkitemTerminal;
+import com.rapidcargo.ftrbackendworkitemms.entity.WorkitemTerminal;
 
 public class WorkitemTerminalDTO {
     private String workitemId;

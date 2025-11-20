@@ -1,9 +1,9 @@
-package com.infosys.ftrbackendterminalms.repository;
+package com.rapidcargo.ftrbackendterminalms.repository;
 
 import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
-import com.infosys.ftrbackendterminalms.entity.Terminal;
+import com.rapidcargo.ftrbackendterminalms.entity.Terminal;
 
 public interface TerminalRepository extends JpaRepository<Terminal, String> {
 

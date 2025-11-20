@@ -1,11 +1,11 @@
-package com.infosys.ftrbackendterminalms.validator;
+package com.rapidcargo.ftrbackendterminalms.validator;
 
 import java.util.regex.Pattern;
 
 import org.springframework.stereotype.Component;
 
-import com.infosys.ftrbackendterminalms.dto.TerminalDTO;
-import com.infosys.ftrbackendterminalms.exception.FTRException;
+import com.rapidcargo.ftrbackendterminalms.dto.TerminalDTO;
+import com.rapidcargo.ftrbackendterminalms.exception.FTRException;
 
 @Component
 public class TerminalValidator {

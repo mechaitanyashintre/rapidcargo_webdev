@@ -1,4 +1,4 @@
-package com.infosys.ftrbackendworkitemms.service;
+package com.rapidcargo.ftrbackendworkitemms.service;
 
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
@@ -12,23 +12,23 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Service;
 
-import com.infosys.ftrbackendworkitemms.dto.HarborDTO;
-import com.infosys.ftrbackendworkitemms.dto.TerminalDTO;
-import com.infosys.ftrbackendworkitemms.dto.VehicleDTO;
-import com.infosys.ftrbackendworkitemms.dto.VehicleWorkitemDTO;
-import com.infosys.ftrbackendworkitemms.dto.WorkitemDTO;
-import com.infosys.ftrbackendworkitemms.dto.WorkitemTerminalDTO;
-import com.infosys.ftrbackendworkitemms.entity.Harbor;
-import com.infosys.ftrbackendworkitemms.entity.VehicleWorkitem;
-import com.infosys.ftrbackendworkitemms.entity.Workitem;
-import com.infosys.ftrbackendworkitemms.entity.WorkitemTerminal;
-import com.infosys.ftrbackendworkitemms.exception.WorkitemException;
-import com.infosys.ftrbackendworkitemms.repository.HarborRepository;
-import com.infosys.ftrbackendworkitemms.repository.VehicleWorkitemRepository;
-import com.infosys.ftrbackendworkitemms.repository.WorkitemRepository;
-import com.infosys.ftrbackendworkitemms.repository.WorkitemTerminalRepository;
-import com.infosys.ftrbackendworkitemms.feign.VehicleMsFeign;
-import com.infosys.ftrbackendworkitemms.feign.TerminalMsFeign;
+import com.rapidcargo.ftrbackendworkitemms.dto.HarborDTO;
+import com.rapidcargo.ftrbackendworkitemms.dto.TerminalDTO;
+import com.rapidcargo.ftrbackendworkitemms.dto.VehicleDTO;
+import com.rapidcargo.ftrbackendworkitemms.dto.VehicleWorkitemDTO;
+import com.rapidcargo.ftrbackendworkitemms.dto.WorkitemDTO;
+import com.rapidcargo.ftrbackendworkitemms.dto.WorkitemTerminalDTO;
+import com.rapidcargo.ftrbackendworkitemms.entity.Harbor;
+import com.rapidcargo.ftrbackendworkitemms.entity.VehicleWorkitem;
+import com.rapidcargo.ftrbackendworkitemms.entity.Workitem;
+import com.rapidcargo.ftrbackendworkitemms.entity.WorkitemTerminal;
+import com.rapidcargo.ftrbackendworkitemms.exception.WorkitemException;
+import com.rapidcargo.ftrbackendworkitemms.repository.HarborRepository;
+import com.rapidcargo.ftrbackendworkitemms.repository.VehicleWorkitemRepository;
+import com.rapidcargo.ftrbackendworkitemms.repository.WorkitemRepository;
+import com.rapidcargo.ftrbackendworkitemms.repository.WorkitemTerminalRepository;
+import com.rapidcargo.ftrbackendworkitemms.feign.VehicleMsFeign;
+import com.rapidcargo.ftrbackendworkitemms.feign.TerminalMsFeign;
 
 @Service
 @PropertySource("classpath:ValidationMessages.properties")

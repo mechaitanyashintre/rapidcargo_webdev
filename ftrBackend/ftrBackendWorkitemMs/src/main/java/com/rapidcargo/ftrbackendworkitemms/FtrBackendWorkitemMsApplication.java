@@ -1,4 +1,4 @@
-package com.infosys.ftrbackendworkitemms;
+package com.rapidcargo.ftrbackendworkitemms;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,4 +1,4 @@
-package com.infosys.ftrbackendvehiclems.exception;
+package com.rapidcargo.ftrbackendvehiclems.exception;
 
 public class VehicleException extends Exception {
     private static final long serialVersionUID = 1L;

@@ -10,7 +10,7 @@
         <relativePath/>
     </parent>
 
-    <groupId>com.infosys.ftrbackendworkitemms</groupId>
+    <groupId>com.rapidcargo.ftrbackendworkitemms</groupId>
     <artifactId>ftrBackendWorkitemMs</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>ftrBackendWorkitemMs</name>

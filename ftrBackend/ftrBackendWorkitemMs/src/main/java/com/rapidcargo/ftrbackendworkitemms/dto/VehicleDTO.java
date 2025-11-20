@@ -1,5 +1,5 @@
 // VehicleDTO.java
-package com.infosys.ftrbackendworkitemms.dto;
+package com.rapidcargo.ftrbackendworkitemms.dto;
 
 import java.util.Date;
 import javax.validation.constraints.NotEmpty;

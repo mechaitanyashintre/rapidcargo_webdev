@@ -1,7 +1,7 @@
 // VehicleWorkitemDTO.java
-package com.infosys.ftrbackendworkitemms.dto;
+package com.rapidcargo.ftrbackendworkitemms.dto;
 
-import com.infosys.ftrbackendworkitemms.entity.VehicleWorkitem;
+import com.rapidcargo.ftrbackendworkitemms.entity.VehicleWorkitem;
 
 public class VehicleWorkitemDTO {
     private String workitemId;

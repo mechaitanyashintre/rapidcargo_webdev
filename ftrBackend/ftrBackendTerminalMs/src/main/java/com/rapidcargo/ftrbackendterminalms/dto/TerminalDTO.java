@@ -1,11 +1,11 @@
-package com.infosys.ftrbackendterminalms.dto;
+package com.rapidcargo.ftrbackendterminalms.dto;
 
 import javax.validation.constraints.Max;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-import com.infosys.ftrbackendterminalms.entity.Terminal;
+import com.rapidcargo.ftrbackendterminalms.entity.Terminal;
 
 public class TerminalDTO {
 

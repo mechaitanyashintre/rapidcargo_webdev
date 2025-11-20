@@ -1,5 +1,5 @@
-// Ftrbackendeureka/src/main/java/com/infosys/ftrbackendeureka/FtrBackendEurekaApplication.java
-package com.infosys.ftrbackendeureka;
+// Ftrbackendeureka/src/main/java/com/rapidcargo/ftrbackendeureka/FtrBackendEurekaApplication.java
+package com.rapidcargo.ftrbackendeureka;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
