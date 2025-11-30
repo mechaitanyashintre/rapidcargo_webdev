@@ -17,14 +17,14 @@ import com.rapidcargo.ftrbackendworkitemms.service.WotkitemService;
 
 @RestController
 @RequestMapping(value = "workitems")
-public class WorkitemApi {
+public class WorkitemController {
 
     @Autowired
     private WotkitemService workitemService;
 
     @PostMapping
     public ResponseEntity<WorkitemDTO> createWorkitem(@RequestBody WorkitemDTO newWorkitem) throws WorkitemException {
-        return new ResponseEntity<>(workitemService.createlorkitem(newWorkitem), HttpStatus.OK);
+        return new ResponseEntity<>(workitemService.createWorkitem(newWorkitem), HttpStatus.OK);
     }
 
     @GetMapping("/{fromCountry}")

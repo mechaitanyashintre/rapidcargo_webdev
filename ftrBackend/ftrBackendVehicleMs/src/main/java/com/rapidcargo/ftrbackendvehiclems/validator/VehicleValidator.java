@@ -1,131 +1,60 @@
-package com.rapidcargo.ftrbackendvehiclems.service;
+package com.rapidcargo.ftrbackendvehiclems.validator;
 
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.PropertySource;
-import org.springframework.core.env.Environment;
-import org.springframework.stereotype.Service;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import com.rapidcargo.ftrbackendvehiclems.dto.VehicleDTO;
-import com.rapidcargo.ftrbackendvehiclems.entity.Vehicle;
 import com.rapidcargo.ftrbackendvehiclems.exception.VehicleException;
-import com.rapidcargo.ftrbackendvehiclems.repository.VehicleRepository;
-import com.rapidcargo.ftrbackendvehiclems.validator.VehicleValidator;
 
-@Service
-@PropertySource("classpath:ValidationMessages.properties")
-public class VehicleServiceImp implements VehicleService {
+public class VehicleValidator {
 
-    @Autowired
-    private VehicleRepository vehicleRepository;
+    private static final List<String> VALID_NAMES = Arrays.asList(
+            "Tower crane", "FirePlace Crane", "Double treadwheel Crane", "Crawler Crane",
+            "Aerial Crane", "Deck Crane");
 
-    @Autowired
-    private Environment env;
+    private static final List<String> VALID_STATUS = Arrays.asList("Active", "InProgress", "Retired");
 
-    // insertNewVehicle
-    @Override
-    public String insertNewVehicle(VehicleDTO vehicleDTO) throws VehicleException {
-        try {
-            VehicleValidator vehicleValidator = new VehicleValidator();
-            vehicleValidator.validateVehicle(vehicleDTO);
-
-            Vehicle vehicle = Vehicle.toEntity(vehicleDTO);
-            vehicleRepository.save(vehicle);
-            return "Vehicle details are inserted successfully with vehicle number: " + vehicleDTO.getVehicleNumber();
-        } catch (VehicleException ve) {
-            throw ve;
-        } catch (Exception e) {
-            String msg = env.getProperty("invalid.data", "INVALID_DATA");
-            throw new VehicleException(msg, e);
+    public Boolean validateVehicle(VehicleDTO dto) throws VehicleException {
+        if (dto == null) {
+            throw new VehicleException("vehicle.invalid.data");
         }
+        return isVehicleNameValid(dto.getVehicleName())
+                && isVehicleStatusValid(dto.getVehicleStatus())
+                && isVehicleNumberValid(dto.getVehicleNumber());
     }
 
-    // fetchAvailableVehicles
-    @Override
-    public List<VehicleDTO> fetchAvailableVehicles() throws VehicleException {
-        List<Vehicle> availabVehicles = vehicleRepository.findByVehicleStatus("Active");
-        if (availabVehicles == null || availabVehicles.isEmpty()) {
-            String msg = env.getProperty("vehicle.not.found", "VEHICLE_NOT_FOUND");
-            throw new VehicleException(msg);
+    private Boolean isVehicleNameValid(String name) throws VehicleException {
+        if (name == null) {
+            throw new VehicleException("vehicle.vehicleName.invalid");
         }
-        List<VehicleDTO> availabVehiclesDTO = new ArrayList<>();
-        for (Vehicle vehicle : availabVehicles) {
-            availabVehiclesDTO.add(VehicleDTO.toDTO(vehicle));
+        if (VALID_NAMES.contains(name)) {
+            return true;
         }
-        return availabVehiclesDTO;
+        throw new VehicleException("vehicle.vehicleName.invalid");
     }
 
-    // updateVehicleStatus
-    @Override
-    public String updateVehicleStatus(String vehicleNumber, VehicleDTO dto) throws VehicleException {
-        try {
-            VehicleValidator vehicleValidator = new VehicleValidator();
-            vehicleValidator.isVehicleStatusValid(dto.getVehicleStatus());
-
-            Vehicle vehicle = vehicleRepository.findByVehicleNumber(vehicleNumber);
-            if (vehicle == null) {
-                String msg = env.getProperty("vehicle.not.found", "VEHICLE_NOT_FOUND");
-                throw new VehicleException(msg);
-            }
-            if (vehicle.getVehicleStatus() != null && vehicle.getVehicleStatus().equals(dto.getVehicleStatus())) {
-                String msg = env.getProperty("vehicle.update.already.exists", "VEHICLE_UPDATE_ALREADY_EXISTS");
-                throw new VehicleException(msg);
-            }
-            vehicle.setVehicleStatus(dto.getVehicleStatus());
-            vehicleRepository.save(vehicle);
-            return "Status of vehicleNumber: " + vehicle.getVehicleNumber() + " updated successfully";
-        } catch (VehicleException ve) {
-            throw ve;
-        } catch (Exception e) {
-            String msg = env.getProperty("invalid.data", "INVALID_DATA");
-            throw new VehicleException(msg, e);
+    public Boolean isVehicleStatusValid(String status) throws VehicleException {
+        if (status == null) {
+            throw new VehicleException("vehicle.vehicleStatus.invalid");
         }
+        if (VALID_STATUS.contains(status)) {
+            return true;
+        }
+        throw new VehicleException("vehicle.vehicleStatus.invalid");
     }
 
-    // fetchVehicleDetailsByVehicleName
-    @Override
-    public List<VehicleDTO> fetchVehicleDetailsByVehicleName(String vehicleName) throws VehicleException {
-        List<Vehicle> vehicleList = vehicleRepository.findByVehicleName(vehicleName);
-        if (vehicleList == null || vehicleList.isEmpty()) {
-            String msg = env.getProperty("vehicle.not.found", "VEHICLE_NOT_FOUND");
-            throw new VehicleException(msg);
+    private Boolean isVehicleNumberValid(String vehicleNumber) throws VehicleException {
+        if (vehicleNumber == null) {
+            throw new VehicleException("vehicle.vehicleNumber.invalid");
         }
-        List<VehicleDTO> vehicleDTOList = new ArrayList<>();
-        for (Vehicle vehicle : vehicleList) {
-            vehicleDTOList.add(VehicleDTO.toDTO(vehicle));
+        // Pattern: 2 letters followed by 6 digits (example); adjust if required
+        Pattern pattern = Pattern.compile("^[A-Za-z]{2}[0-9]{6}$");
+        Matcher hasPattern = pattern.matcher(vehicleNumber);
+        if (hasPattern.find()) {
+            return true;
         }
-        return vehicleDTOList;
-    }
-
-    // removeVehicle
-    @Override
-    public String removeVehicle(String vehicleNum) throws VehicleException {
-        try {
-            Vehicle vehicle = vehicleRepository.findByVehicleNumber(vehicleNum);
-            if (vehicle == null) {
-                String msg = env.getProperty("invalid.data", "INVALID_DATA");
-                throw new VehicleException(msg);
-            }
-            vehicleRepository.delete(vehicle);
-            return "Vehicle details are deleted successfully";
-        } catch (VehicleException ve) {
-            throw ve;
-        } catch (Exception e) {
-            String msg = env.getProperty("invalid.data", "INVALID_DATA");
-            throw new VehicleException(msg, e);
-        }
-    }
-
-    // fetchVehicleDetailsByVehicleNumber
-    @Override
-    public VehicleDTO fetchVehicleByVehicleNumber(String vehicleNumber) throws VehicleException {
-        Vehicle vehicle = vehicleRepository.findByVehicleNumber(vehicleNumber);
-        if (vehicle == null) {
-            String msg = env.getProperty("vehicle.not.found", "VEHICLE_NOT_FOUND");
-            throw new VehicleException(msg);
-        }
-        return VehicleDTO.toDTO(vehicle);
+        throw new VehicleException("vehicle.vehicleNumber.invalid");
     }
 }

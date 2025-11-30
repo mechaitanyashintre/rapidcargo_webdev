@@ -32,7 +32,7 @@ public class VehicleController {
 
     // fetchAvailableVehicles
     @GetMapping
-    public ResponseEntity<List<VehicleDTO>> fetchAvailableVehicles() {
+    public ResponseEntity<List<VehicleDTO>> fetchAvailableVehicles() throws VehicleException {
         return new ResponseEntity<>(vehicleService.fetchAvailableVehicles(), HttpStatus.OK);
     }
 
