@@ -18,7 +18,7 @@ import com.rapidcargo.ftrbackenduserms.repository.UserRepository;
 import com.rapidcargo.ftrbackenduserms.validator.UserValidator;
 
 @Service
-@PropertySource("classpath:ValidationMessages.prop")
+@PropertySource("classpath:ValidationMessages.properties")
 public class UserServiceImp implements UserService {
 
     @Autowired
