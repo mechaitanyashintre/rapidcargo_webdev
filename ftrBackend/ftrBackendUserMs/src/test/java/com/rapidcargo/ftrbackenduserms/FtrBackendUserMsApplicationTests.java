@@ -1,10 +1,10 @@
-package com.example.demo;
+package com.rapidcargo.ftrbackenduserms;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DemoApplicationTests {
+class FtrBackendUserMsApplicationTests {
 
 	@Test
 	void contextLoads() {
