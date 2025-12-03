@@ -1,0 +1,623 @@
+{
+	"info": {
+		"_postman_id": "0469c5c7-3440-4fe4-a671-597ab2ecb26f",
+		"name": "RAPIDCARGO - Services",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16969451"
+	},
+	"item": [
+		{
+			"name": "UserProfile",
+			"item": [
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"firstName\":\"Annie\",\n\"lastName\": \"Thomas\",\n\"emailId\":\"anniethomas@gmail.com\",\n\"mobileNumber\":9090987890,\n\"password\":\"anniethomas!12\",\n\"nationality\":\"Indian\",\n\"passportNumber\":\"A7878765\",\n\"permanentAddress\":\"195/12, Cross, Lalbagh Road, K S Garden, Bangalore.\",\n\"officeAddress\":\"16, Gandhibazaarmnrd, Basavangudi, Bangalore.\",\n\"personalIdentificationNumber\":676767898765\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1101/userprofile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1101",
+							"path": [
+								"userprofile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:1101/userprofile/10021",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1101",
+							"path": [
+								"userprofile",
+								"10021"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"mobileNumber\": 1111111111,\n    \"permanentAddress\": \"295/12, Cross, Lalbagh Road, K S Garden, Mumbai.\",\n    \"officeAddress\": \"16, Gandhibazaarmnrd, Basavangudi, Mumbai.\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1101/userprofile/10021",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1101",
+							"path": [
+								"userprofile",
+								"10021"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:1101/userprofile/10021",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1101",
+							"path": [
+								"userprofile",
+								"10021"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"userId\":10001,\n\"password\":\"anniethomas!12\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1101/userprofile/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1101",
+							"path": [
+								"userprofile",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Terminals",
+			"item": [
+				{
+					"name": "Create Terminal",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"terminalName\": \"Tanjung1\",\n\"terminalDescription\": \"T8-Oil Container\",\n\"country\": \"Singapore\",\n\"itemType\": \"Oil Container\",\n\"capacity\": 90000,\n\"availableCapacity\": 50000,\n\"status\": \"Available\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1102/terminals",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1102",
+							"path": [
+								"terminals"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Terminals",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:1102/terminals",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1102",
+							"path": [
+								"terminals"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Terminal",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"availableCapacity\": 45000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1102/terminals/T12/10000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1102",
+							"path": [
+								"terminals",
+								"T12",
+								"10000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Terminal",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:1102/terminals/T20",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1102",
+							"path": [
+								"terminals",
+								"T20"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch Terminals by ItemType",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:1102/terminals/fetchTerminalsByItemType/Computer Hardware",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1102",
+							"path": [
+								"terminals",
+								"fetchTerminalsByItemType",
+								"Computer Hardware"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Vehicles",
+			"item": [
+				{
+					"name": "Create Vehicle",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"vehicleNumber\":\"ZZ778890\",\n\"vehicleName\":\"Tower crane\",\n\"maxLiftingCapacity\": \"19.8\",\n\"retireDate\":\"2030-12-20\",\n\"vehicleStatus\":\"Active\",\n\"country\":\"Australia\",\n\"harborLocation\":\"Sydney Harbor\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1103/vehicles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1103",
+							"path": [
+								"vehicles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Vehicles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:1103/vehicles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1103",
+							"path": [
+								"vehicles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Vehicle",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"vehicleStatus\": \"InProgress\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1103/vehicles/ZZ7890",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1103",
+							"path": [
+								"vehicles",
+								"ZZ7890"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Vehicle",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:1103/vehicles/ZZ7890",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1103",
+							"path": [
+								"vehicles",
+								"ZZ7890"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Vehicle by Managed Name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:1103/vehicles/managed-name/Crawler crane",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1103",
+							"path": [
+								"vehicles",
+								"managed-name",
+								"Crawler crane"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Vehicle by Managed Number",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:1103/vehicles/managed-number/SD3456",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1103",
+							"path": [
+								"vehicles",
+								"managed-number",
+								"SD3456"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "WorkItems",
+			"item": [
+				{
+					"name": "Create WorkItem",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"userId\":10002,\n\"itemName\":\"UPS\",\n\"itemType\":\"Computer Hardware\",\n\"itemDescription\":\"Luminous Inverter battery Combo 1100+150AH\",\n\"messageToRecipient\":\"Please confirm once received.\",\n\"quantity\":\"7500\",\n\"sourceCountry\":\"India\",\n\"destinationCountry\":\"Singapore\",\n\"selectedHarborLocation\":\"Tanjong Pagar\",\n\"shippingDate\":\"2020-08-12\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1104/workitems",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1104",
+							"path": [
+								"workitems"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All WorkItems",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:1104/workitems",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1104",
+							"path": [
+								"workitems"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update WorkItem",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"selectedHarborLocation\":\"Tanjong Pagar\",\n\"shippingDate\":\"2020-08-22\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1104/workitems/J2014",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1104",
+							"path": [
+								"workitems",
+								"J2014"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get WorkItems by Managed User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:1104/workitems/managed-user/10005",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1104",
+							"path": [
+								"workitems",
+								"managed-user",
+								"10005"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Assign Vehicle to WorkItem",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"vehicleNumber\":\"SD3456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1104/workitems/managed-vehicle/J2012",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1104",
+							"path": [
+								"workitems",
+								"managed-vehicle",
+								"J2012"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Check WorkItem Status",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:1104/workitems/managed-status/J2013",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1104",
+							"path": [
+								"workitems",
+								"managed-status",
+								"J2013"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch WorkItemDetails By VehicleNumber",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:1104/workitems/managed-vehicle/ZZ778890",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1104",
+							"path": [
+								"workitems",
+								"managed-vehicle",
+								"ZZ778890"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update WorkItem Status",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:1104/workitems/managed-update/J2013",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1104",
+							"path": [
+								"workitems",
+								"managed-update",
+								"J2013"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Assign Terminal to WorkItem",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:1104/workitems/managed-terminal/J2017",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1104",
+							"path": [
+								"workitems",
+								"managed-terminal",
+								"J2017"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
