@@ -1,0 +1,1 @@
+create a clean new repo and store these config files into that one so that application can access those files as cloud config and use it - https://github.com/mechaitanyashintre/rapidcargo-config
